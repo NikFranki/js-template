@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script src="template.js"></script>
+    <script>
+        // 模板引擎，规则 渲染器
+        // template('hello{{ name }}');
+
+        // <%=变量%> <%-其他%> <%逻辑%> 正则（） with 作用域绑定
+        var complied = template("hello:<%= name %>");
+        console.log(complied({name: 'franki'}));
+        complied({name: 'lala'});
+    </script>
+</body>
+</html>
